@@ -1,4 +1,5 @@
-.home {
-  color: rgba(var(--bs-success-text-emphasis));
-  background-color: rgba(--bs-primary-rgb);
+.test {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
+  border: 2px solid rgba(var(--bs-danger-bg-subtle));
 }
