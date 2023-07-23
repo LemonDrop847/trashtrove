@@ -2,7 +2,7 @@ import "../styles/Home.css";
 export default function ContactUs() {
   return (
     <section id="contact" className="contact section-padding">
-      <div className="container mt-5 mb-5">
+      <div className="container-fluid mt-5 mb-5">
         <div className="row">
           <div className="col-md-12">
             <div className="section-header text-center pb-5">

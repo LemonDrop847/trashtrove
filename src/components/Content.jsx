@@ -3,7 +3,7 @@ export default function Content() {
   return (
     <div>
       <section id="about" className="about section-padding">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12">
               <div className="about-img">
@@ -43,7 +43,7 @@ export default function Content() {
       </section>
 
       <section className="aim section-padding" id="aim">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-md-12">
               <div className="section-header text-center pb-5">
