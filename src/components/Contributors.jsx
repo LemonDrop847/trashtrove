@@ -67,7 +67,7 @@ export default function Contributors() {
                 />
               </div>
               <div className="img-text">
-                <h4>choyam Prabha Mallick</h4>
+                <h4>Soyam Prabha Mallick</h4>
               </div>
             </div>
           </div>
