@@ -1,8 +1,25 @@
 import "../styles/Upload.css";
-
+import { useNavigate } from "react-router";
 export default function Upload() {
+  const navigate = useNavigate();
   return (
     <div className="body">
+      <button onClick={() => navigate("/")}>
+        <img
+          src="https://i.postimg.cc/fy1xxDN7/back.png"
+          style={{
+            position: "absolute",
+            left: "1rem",
+            top: "1rem",
+            width: "3rem",
+            height: "3rem",
+            borderRadius: "100%",
+            border: "2px solid black",
+            padding: "0.3rem",
+          }}
+          alt=""
+        />
+      </button>
       <div className="container1 d-flex justify-content-center flex-column align-items-center">
         <input type="file" id="file" accept="image/*" hidden />
         <div className="img-area1" data-img="">
@@ -12,8 +29,26 @@ export default function Upload() {
             Image size must be less than <span>2MB</span>
           </p>
         </div>
-        <input type="file" name="" className="select-image " id="" />
-        <button className= "select-image" style={{marginTop:'1rem'}}>Submit</button>
+        <input
+          type="file"
+          name="file-input"
+          id="file-input"
+          className="select-image"
+          style={{ overflow: "hidden" }}
+          // id="img"
+        />
+        {/* <label
+          className="select-image"
+          id="select-image"
+          htmlFor="file-input"
+          // value={file}
+          // onChange={(e) => setFile(e.target.value)}
+        >
+          Select a File
+        </label> */}
+        <button className="select-image" style={{ marginTop: "1rem" }}>
+          Submit
+        </button>
       </div>
 
       <div className="content-part">
