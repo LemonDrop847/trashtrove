@@ -104,6 +104,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
+  
 }
 .select-image:hover {
   background: var(--dark-brown);

@@ -85,15 +85,21 @@ export default function Upload() {
             </div>
           )}
         </div>
-        <input
-          type="file"
-          name="file-input"
-          id="file-input"
+        <label
+          htmlFor="file-input"
+          style={{ cursor: "pointer" }}
           className="select-image"
-          onChange={handleImageChange}
-          style={{ overflow: "hidden" }}
-          // id="img"
-        />
+        >
+          {uploadedImage ? uploadedImage.name : `Select File`}
+          <input
+            type="file"
+            name="file-input"
+            id="file-input"
+            onChange={handleImageChange}
+            style={{ display: "none" }}
+          />
+        </label>
+
         {/* <label
           className="select-image"
           id="select-image"
