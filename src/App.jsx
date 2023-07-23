@@ -14,7 +14,7 @@ function App() {
       </Routes> */}
       {/* <Upload />  */}
       <Home />
-      <Display />
+      {/* <Display /> */}
     </Router>
   );
 }
