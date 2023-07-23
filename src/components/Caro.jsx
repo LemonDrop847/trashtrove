@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 export default function Caro() {
   return (
     <section id="whywaste" className="whywaste section-padding">

@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 export default function ContactUs() {
   return (
     <section id="contact" className="contact section-padding">
