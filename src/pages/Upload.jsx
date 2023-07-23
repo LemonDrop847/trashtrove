@@ -56,7 +56,7 @@ export default function Upload() {
           {" "}
           Congratulations! <br />{" "}
         </h1>
-        <h2> The product you've uploaded is recyclable. </h2>
+        <h2> The product you have uploaded is recyclable. </h2>
         <h3> Thank you for making an environmental choice. </h3>
         <button className="see-options">See recycling options</button>
       </div>

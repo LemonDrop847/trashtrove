@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 export default function Display() {
   return (
     <div className="whole">
-      <h1 className="heading-opt"> Here's what you can do ♻️</h1>
+      <h1 className="heading-opt"> Here is what you can do ♻️</h1>
       <div className="holder" id="txt-holder">
         <Typewriter
           words={[
