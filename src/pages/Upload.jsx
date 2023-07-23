@@ -1,7 +1,44 @@
 import "../styles/Upload.css";
 import { useNavigate } from "react-router";
+import axios from "axios";
+import { useState } from "react";
+import URL from "../constants/constants";
 export default function Upload() {
   const navigate = useNavigate();
+  const [uploadedImage, setUploadedImage] = useState(null);
+  const [prediction, setPrediction] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setUploadedImage(file);
+  };
+
+  const handleSubmit = () => {
+    if (uploadedImage) {
+      // console.log("Working!");
+      const formData = new FormData();
+      formData.append("image", uploadedImage);
+
+      axios
+        .post(`${URL}/check`, formData)
+        .then((response) => {
+          setPrediction(response.data.prediction);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+  };
+
+  const handleSeeOptions = () => {
+    if (uploadedImage) {
+      if (prediction === "Recyclable") {
+        navigate("/middle", { state: { image: uploadedImage } });
+      } else {
+        navigate("/middle", { state: { image: uploadedImage } });
+      }
+    }
+  };
   return (
     <div className="body">
       <button onClick={() => navigate("/")}>
@@ -21,7 +58,6 @@ export default function Upload() {
         />
       </button>
       <div className="container1 d-flex justify-content-center flex-column align-items-center">
-        <input type="file" id="file" accept="image/*" hidden />
         <div className="img-area1" data-img="">
           <i className="bx bxs-cloud-upload icon"></i>
           <h3>Upload Image</h3>
@@ -34,6 +70,7 @@ export default function Upload() {
           name="file-input"
           id="file-input"
           className="select-image"
+          onChange={handleImageChange}
           style={{ overflow: "hidden" }}
           // id="img"
         />
@@ -46,20 +83,41 @@ export default function Upload() {
         >
           Select a File
         </label> */}
-        <button className="select-image" style={{ marginTop: "1rem" }}>
+        <button
+          className="select-image"
+          style={{ marginTop: "1rem" }}
+          onClick={handleSubmit}
+        >
           Submit
         </button>
       </div>
 
-      <div className="content-part">
-        <h1>
-          {" "}
-          Congratulations! <br />{" "}
-        </h1>
-        <h2> The product you have uploaded is recyclable. </h2>
-        <h3> Thank you for making an environmental choice. </h3>
-        <button className="see-options">See recycling options</button>
-      </div>
+      {prediction ? (
+        <div className="content-part">
+          {prediction === "Recyclable" ? (
+            <>
+              <h1>Congratulations!</h1>
+              <h2>The product you have uploaded is recyclable.</h2>
+              <h3>Thank you for making an environmental choice.</h3>
+              <button className="see-options" onClick={handleSeeOptions}>
+                See disposing options
+              </button>
+            </>
+          ) : (
+            <>
+              <h1>Sorry!</h1>
+              <h2>The product you have uploaded is not recyclable.</h2>
+              <button className="see-options" onClick={handleSeeOptions}>
+                See disposing options
+              </button>
+            </>
+          )}
+        </div>
+      ) : (
+        <div className="content-part">
+          <h1>Upload an Image to get started</h1>
+        </div>
+      )}
     </div>
   );
 }

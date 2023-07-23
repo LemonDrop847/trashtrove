@@ -1,4 +1,4 @@
-export default function Contactus() {
+export default function ContactUs() {
   return (
     <section id="contact" className="contact section-padding">
       <div className="container mt-5 mb-5">
