@@ -68,6 +68,10 @@ The TrashTrove project leverages the following technologies:
 - Machine Learning:
   - TensorFlow - An open-source machine learning framework developed by Google.
   - Keras - A high-level neural networks API that runs on top of TensorFlow.
+  - Fastai -  Focused on deep learning and artificial intelligence.
+  - Openai api - Can be used for various purposes, including semantic search, content generation, translation, sentiment analysis, and many others.
+  - Torch - An open-source machine learning library, a scientific computing framework, and a scripting language based on Lua.
+  - NumPy - NumPy contains a large number of various mathematical operations, foundation on ML stack.
 
 ## Getting Started
 
