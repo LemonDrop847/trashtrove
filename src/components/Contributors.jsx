@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 export default function Contributors() {
   return (
     <section className="team section-padding" id="team">

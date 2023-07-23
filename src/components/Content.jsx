@@ -1,3 +1,4 @@
+import "../styles/Home.css";
 export default function Content() {
   return (
     <div>
