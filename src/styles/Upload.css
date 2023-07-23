@@ -1,166 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-	--green: #43A64C;
-	--light-green: #343a40;
-	--dark-brown: #245828;
-	--grey: #ffffff;
-    --orange: #f9741b;
-    --black: #000000;
-    --white: #fff;
+  --green: #43a64c;
+  --light-green: #343a40;
+  --dark-brown: #245828;
+  --grey: #ffffff;
+  --orange: #f9741b;
+  --black: #000000;
+  --white: #fff;
 }
 
 .body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: var(--light-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--light-green);
 }
-
 
 .container1 {
-	width: 40%;
-	background: #343a40;
-	padding: 1.8rem;
-	border-radius: 1.8rem;
-    margin-left: 4rem;
-    height: 30rem;
+  width: 40%;
+  background: #343a40;
+  padding: 1.8rem;
+  border-radius: 1.8rem;
+  margin-left: 4rem;
+  height: 30rem;
 }
 .img-area1 {
-	position: relative;
-	width: 100%;
-	height: 15rem;
-	background: var(--grey);
-	margin-bottom: 1.8rem;
-	border-radius: 1rem;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  background: var(--grey);
+  margin-bottom: 1.8rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .img-area1 .icon {
-	font-size: 100px;
+  font-size: 100px;
 }
 .img-area1 h3 {
-	font-size: 1.25rem;
-	font-weight: 500;
-	margin-bottom: 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
 }
 .img-area1 p {
-	color: #000000;
+  color: #000000;
 }
 .img-area1 p span {
-	font-weight: 600;
+  font-weight: 600;
 }
 .img-area1 img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 100;
 }
 .img-area1::before {
-	content: attr(data-img);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .5);
-	color: #fff;
-	font-weight: 500;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
-	opacity: 0;
-	transition: all .3s ease;
-	z-index: 200;
+  content: attr(data-img);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 200;
 }
 .img-area1.active:hover::before {
-	opacity: 1;
+  opacity: 1;
 }
 .select-image {
-	width: 50%;
-	padding: 1rem 0;
-	border-radius: 1rem;
-	background: var(--green);
-	color: #fff;
-	font-weight: 500;
-	font-size: 1rem;
-	border: none;
-	cursor: pointer;
-	transition: all .3s ease;
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  background: var(--green);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 .select-image:hover {
-	background: var(--dark-brown);
+  background: var(--dark-brown);
 }
 .submit-image {
-	width: 50%;
-	padding: 1rem 0;
-	border-radius: 1rem;
-	background: var(--green);
-	color: #fff;
-	font-weight: 500;
-	font-size: 1rem;
-	border: none;
-	cursor: pointer;
-	transition: all .3s ease;
-    margin-top: 5rem;
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  background: var(--green);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5rem;
 }
 .submit-image:hover {
-	background: var(--dark-brown);
+  background: var(--dark-brown);
 }
 
-.content-part{
-    margin-left: 5rem;
-    margin-top: -2rem;
-    width: 35rem;
-    color: white;
+.content-part {
+  margin-left: 5rem;
+  margin-top: -2rem;
+  width: 35rem;
+  color: white;
 }
 .see-options {
-    display: block;
-	width: 40%;
-	padding: 1rem 0;
-	border-radius: 1rem;
-	background: var(--black);
-	color: #fff;
-	font-weight: 500;
-	font-size: 1rem;
-	border: none;
-	cursor: pointer;
-	transition: all .3s ease;
-    margin-top: 2rem;
-}
- 
-.see-options:hover {
-	background: var(--dark-brown);
+  display: block;
+  width: 40%;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  background: var(--black);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
 }
 
-@media only screen and (max-width:900px){
-	.container{
-		position: fixed;
-		margin-top: 1rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
-	.content-part{
-		position: fixed;
-		margin-top: 50rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
+.see-options:hover {
+  background: var(--dark-brown);
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    position: fixed;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .content-part {
+    position: fixed;
+    margin-top: 50rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
