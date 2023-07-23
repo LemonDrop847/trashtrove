@@ -4,6 +4,17 @@ import "../styles/Home.css";
 export default function Hero() {
   return (
     <section className="start-video">
+      <div
+        className="position-absolute fw-bold text-white"
+        style={{
+          color: "#fff",
+          margin: "1rem",
+          fontSize: "20px",
+          zIndex: "2",
+        }}
+      >
+        <h2>TrashTrove</h2>
+      </div>
       <div className="start-video__overlay"></div>
       <video src={videobg} autoPlay loop muted />
 

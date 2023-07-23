@@ -2,7 +2,7 @@ import "../styles/Home.css";
 export default function Caro() {
   return (
     <section id="whywaste" className="whywaste section-padding">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
             <div className="section-header text-center pb-5">

@@ -104,7 +104,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  
 }
 .select-image:hover {
   background: var(--dark-brown);
@@ -137,7 +136,7 @@
   width: 40%;
   padding: 1rem 0;
   border-radius: 1rem;
-  background: var(--black);
+  background: var(--dark-brown);
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
@@ -148,7 +147,7 @@
 }
 
 .see-options:hover {
-  background: var(--dark-brown);
+  background: var(--black);
 }
 
 @media only screen and (max-width: 900px) {
