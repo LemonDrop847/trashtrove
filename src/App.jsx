@@ -13,7 +13,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
       </Routes> */}
       {/* <Upload />  */}
-      <Display /> 
+      <Home />
+      {/* <Display /> */}
     </Router>
   );
 }
