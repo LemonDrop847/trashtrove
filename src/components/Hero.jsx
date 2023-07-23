@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import videobg from "../assets/bgvideo.mp4";
+import "../styles/Home.css";
 export default function Hero() {
   return (
     <section className="start-video">

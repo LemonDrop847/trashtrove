@@ -3,7 +3,7 @@ import "../styles/Home.css";
 import "../assets/bootstrap.bundle.min.js";
 
 import Contributors from "../components/Contributors";
-import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/Contactus";
 import Hero from "../components/Hero";
 import Caro from "../components/Caro";
 import Content from "../components/Content";

@@ -45,7 +45,7 @@
 .holder {
   padding: 2.5rem;
   background-color: #ffffff;
-  max-width: 95%;
+  width: 95%;
   height: 100%;
   position: absolute;
   box-shadow: 10px 5px 10px 0px #909090;
@@ -53,8 +53,8 @@
   margin-left: 2rem;
   font-weight: 500;
   overflow-y: scroll;
-  overflow-wrap:normal;
-  white-space: pre;
+  overflow-wrap: break-word;
+  white-space: pre-line;
 }
 
 @media screen and (max-width: 1500px) {

@@ -5,16 +5,12 @@ export default function Back() {
   return (
     <button onClick={() => navigate("/")}>
       <img
-        src="https://i.postimg.cc/fy1xxDN7/back.png"
+        src="https://i.postimg.cc/bwNbQ9Nm/arrow2flip.png"
+        className="back"
         style={{
           position: "absolute",
           left: "1rem",
           top: "1rem",
-          width: "3rem",
-          height: "3rem",
-          borderRadius: "100%",
-          border: "2px solid black",
-          padding: "0.3rem",
         }}
         alt=""
       />
