@@ -1,5 +1,5 @@
 import "../styles/Home.css";
-// import videobg from "../assets/img/bgvideo.mp4";
+import videobg from "../assets/bgvideo.mp4";
 import "../assets/bootstrap.bundle.min.js";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <div classNameName="container home">
       <section className="start-video">
         <div className="start-video__overlay"></div>
-        {/* <video src={videobg} autoPlay loop muted /> */}
+        <video src={videobg} autoPlay loop muted />
 
         <div className="start-video__content h-100 container-custom position-absolute video-content">
           <div className="d-flex h-100 align-items-center start-video__content-width">
