@@ -1,73 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-.whole{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
-    background-color: #343a40; 
-    height: 100vh;
+.whole {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #343a40;
+  height: 100vh;
+  /* overflow-x: auto; */
 }
 
-.heading-opt{
-    text-align: center;
-    padding: 5rem;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    color: #ffffff;
+.heading-opt {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #ffffff;
 }
 
 .button1 {
-    height: 3.2rem;
-    width: 7rem;
-    background-color: #8A0A24;
-    border: 1px solid #8A0A24;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    margin: 15rem;
-    position: absolute;
-    top: 80%;
+  height: 3.2rem;
+  width: 7rem;
+  background-color: #8a0a24;
+  border: 1px solid #8a0a24;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin: 15rem;
+  position: absolute;
+  top: 80%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: 500;
-border-radius: 1rem;
+  border-radius: 1rem;
 }
 
-.button1:hover{
-    background-color: #451c00;
-    border: 1px solid #451c00;
-    color: rgb(255, 255, 255);
+.button1:hover {
+  background-color: #451c00;
+  border: 1px solid #451c00;
+  color: rgb(255, 255, 255);
 }
 
 .holder {
-    padding: 2.5rem;
-    background-color: #ffffff;
-    width: 92rem;
-    height: 22rem;
-    box-shadow: 10px 5px 10px 0px #909090;
-    font-size: 1rem;
-    margin-left: 2rem;
-    font-weight: 500;
-    overflow-y: scroll;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  max-width: 95%;
+  height: 100%;
+  position: absolute;
+  box-shadow: 10px 5px 10px 0px #909090;
+  font-size: 1rem;
+  margin-left: 2rem;
+  font-weight: 500;
+  overflow-y: scroll;
+  overflow-wrap:normal;
+  white-space: pre;
 }
 
 @media screen and (max-width: 1500px) {
-    .heading-opt {
-        font-size: 2.5rem;
-        width: auto;
-    }
+  .heading-opt {
+    font-size: 2.5rem;
+    width: auto;
+  }
 
-    button {
-        font-size: 1.3rem;
-        margin-top: 10 rem;
-    }
+  button {
+    font-size: 1.3rem;
+    margin-top: 10 rem;
+  }
 
-    .holder {
-        width: fit-content;
-        height: auto;
-        padding: 2rem;
-        font-size: 1.1rem;
-    }
+  .holder {
+    /* width: fit-content; */
+    height: auto;
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
 }

@@ -2,18 +2,21 @@ import "../styles/Upload.css";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import { useState } from "react";
-import URL from "../constants/constants";
+import SERVER_URL from "../constants/constants";
 import Back from "../components/Back";
 
 export default function Upload() {
   const navigate = useNavigate();
   const [uploadedImage, setUploadedImage] = useState(null);
+  const [imgSrc, setImgSrc] = useState(null);
   const [prediction, setPrediction] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     setUploadedImage(file);
+    setImgSrc(URL.createObjectURL(file));
+    console.log(uploadedImage);
   };
 
   const handleSubmit = async () => {
@@ -22,7 +25,7 @@ export default function Upload() {
       try {
         const formData = new FormData();
         formData.append("image", uploadedImage);
-        const response = await axios.post(`${URL}/check`, formData);
+        const response = await axios.post(`${SERVER_URL}/check`, formData);
         setPrediction(response.data.prediction);
       } catch (error) {
         console.error("Error:", error);
@@ -37,15 +40,15 @@ export default function Upload() {
       const formData = new FormData();
       formData.append("image", uploadedImage);
       console.log(uploadedImage);
-      const response = await axios.post(`${URL}/detect`, formData);
+      const response = await axios.post(`${SERVER_URL}/detect`, formData);
       console.log(response);
       console.log("Prediction:", response.data.prediction);
-      const items=response.data.prediction;
+      const items = response.data.prediction;
       const obj = items && items.join(", ");
       console.log(items, obj);
 
       const apiEndpoint =
-        ways === 0 ? `${URL}/recycleways` : `${URL}/disposeways`;
+        ways === 0 ? `${SERVER_URL}/recycleways` : `${SERVER_URL}/disposeways`;
       const finalResponse = await axios.post(apiEndpoint, {
         items: obj,
       });
@@ -71,10 +74,16 @@ export default function Upload() {
       <div className="container1 d-flex justify-content-center flex-column align-items-center">
         <div className="img-area1" data-img="">
           <i className="bx bxs-cloud-upload icon"></i>
-          <h3>Upload Image</h3>
-          <p>
-            Image size must be less than <span>2MB</span>
-          </p>
+          {uploadedImage ? (
+            <img src={imgSrc} style={{ position: "absolute" }} />
+          ) : (
+            <div>
+              <h3>Upload Image</h3>
+              <p>
+                Image size must be less than <span>2MB</span>
+              </p>
+            </div>
+          )}
         </div>
         <input
           type="file"

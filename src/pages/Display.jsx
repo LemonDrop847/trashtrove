@@ -10,7 +10,7 @@ export default function Display() {
     <div className="whole">
       <Back />
       <h1 className="heading-opt"> Here is what you can do ♻️</h1>
-      <div className="holder" id="txt-holder">
+      <div className="holder">
         <Typewriter
           words={[text]}
           cursor
