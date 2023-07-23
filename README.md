@@ -28,7 +28,7 @@
 
 TrashTrove is a web application that utilizes machine learning to detect recyclable and non-recyclable items from images provided by the user. It aims to promote recycling practices by providing users with valuable information about how to properly recycle different items. The application is built using Vite + React for the frontend, Flask for the backend, and TensorFlow with Keras for the machine learning model.
 
-![TrashTrove Logo](/path/to/logo.png)
+![TrashTrove Logo](https://i.postimg.cc/DyVW7Wpy/trashtrove.png)
 
 ## Table of Contents
 
