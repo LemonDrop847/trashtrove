@@ -79,32 +79,32 @@ Follow these instructions to set up a development environment and run TrashTrove
 
 1. **Prerequisites**:
 
-   - Make sure you have Python installed. (Preferably Python 3.6+)
+   - Make sure you have Python installed. (Preferably Python 3.9+)
    - Install Node.js and npm for frontend development.
-   - Make sure you have TensorFlow and Keras installed. You can install them using pip:
+   - Make sure you have TensorFlow, Keras and fastai installed. You can install them using pip:
 
      ```bash
-     pip install tensorflow keras
+     pip install tensorflow keras fastai
      ```
 
 2. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/TrashTrove.git
-   cd TrashTrove
+   git clone https://github.com/LemonDrop847/TrashTrove.git
+   git clone https://github.com/LemonDrop847/TrashTrove-server.git
    ```
 
 ### Frontend Setup:
 
 ```bash
-cd frontend
+cd trashtrove
 npm install
 ```
 
 ### Backend Setup:
 
 ```bash
-cd backend
+cd trashtrove-server
 pip install -r requirements.txt
 ```
 
@@ -113,20 +113,20 @@ pip install -r requirements.txt
 Frontend:
 
 ```bash
-cd frontend
+cd trashtrove
 npm run dev
 ```
 
 Backend:
 
 ```bash
-cd backend
-python app.py
+cd trashtrove-server
+python flask_app.py
 ```
 
 ### Open TrashTrove in your Browser:
 
-Visit http://localhost:3000 to access TrashTrove on your local machine.
+Visit http://localhost:5173 to access TrashTrove on your local machine.
 
 ### Usage
 
